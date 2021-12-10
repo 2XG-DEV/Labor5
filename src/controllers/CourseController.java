@@ -3,15 +3,16 @@ package controllers;
 import models.Course;
 import models.Teacher;
 import repos.CourseJDBCRepo;
+import repos.ICrudRepo;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class CourseController {
-    CourseJDBCRepo repo;
+    ICrudRepo repo;
 
-    public CourseController(CourseJDBCRepo repo) {
+    public CourseController(ICrudRepo repo) {
         this.repo = repo;
     }
 

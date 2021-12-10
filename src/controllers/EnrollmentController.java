@@ -4,13 +4,14 @@ import models.Course;
 import models.Enrollment;
 import models.Student;
 import repos.EnrollmentsJDBCRepo;
+import repos.ICrudRepo;
 
 import java.util.List;
 
 public class EnrollmentController {
-    EnrollmentsJDBCRepo repo;
+    ICrudRepo repo;
 
-    public EnrollmentController(EnrollmentsJDBCRepo repo) {
+    public EnrollmentController(ICrudRepo repo) {
         this.repo = repo;
     }
 

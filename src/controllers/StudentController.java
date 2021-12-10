@@ -1,6 +1,7 @@
 package controllers;
 
 import models.Student;
+import repos.ICrudRepo;
 import repos.StudentJDBCRepo;
 
 import java.util.Collections;
@@ -8,11 +9,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class StudentController {
-    StudentJDBCRepo repo;
+    ICrudRepo repo;
 
 
 
-    public StudentController(StudentJDBCRepo repo) {
+    public StudentController(ICrudRepo repo) {
         this.repo = repo;
     }
 

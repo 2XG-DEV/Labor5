@@ -2,16 +2,17 @@ package controllers;
 
 
 import models.Teacher;
+import repos.ICrudRepo;
 import repos.TeacherJDBCRepo;
 
 import java.util.List;
 
 public class TeacherController {
-    TeacherJDBCRepo repo;
+    ICrudRepo repo;
 
 
 
-    public TeacherController(TeacherJDBCRepo repo) {
+    public TeacherController(ICrudRepo repo) {
         this.repo = repo;
     }
 
