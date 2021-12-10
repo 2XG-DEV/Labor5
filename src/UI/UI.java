@@ -19,6 +19,10 @@ public class UI {
         this.controller = controller;
     }
 
+    /**
+     * Shows menu and responds to user interaction
+     * @throws IOException
+     */
     public void render() throws IOException {
         int choice = -1;
         do {
@@ -110,8 +114,10 @@ public class UI {
     }
 
 
-
-
+    /**
+     * Render students to screen
+     * @param all list of students to be rendered
+     */
     public void showStudents(List<Student> all){
 
         for(Student s : all){
@@ -119,12 +125,20 @@ public class UI {
         }
     }
 
+    /**
+     * Render courses to screen
+     * @param all list of courses to be rendered
+     */
     public void showCourses(List<Course> all){
         for(Course c : all){
             System.out.println("Course : " + c.getName() + "leitet bei : " + controller.getTeacherById(c.getTeacherId()).getLastName() + " mit credits " + c.getCredits() +" freie platze : "+controller.calculateFreePlacesInCourse(c) +" von " + c.getCredits()+" mit id "+c.getCourseId());
         }
     }
 
+    /**
+     * Render teachers to screen
+     * @param all list of teachers to be rendered
+     */
     public void showTeachers(List<Teacher> all){
         for(Teacher t : all){
             System.out.println("Prof. "+t.getLastName()+" "+t.getFirstName()+" mit id "+t.getTeacherId());

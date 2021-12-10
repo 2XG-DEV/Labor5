@@ -34,13 +34,7 @@ public class Student  implements Comparable<Student>{
         return lastName;
     }
 
-    public int getCredits() {
-        return 0;
-    }
 
-    public ArrayList<Course> getEnrolledCourses() {
-        return new ArrayList<Course>();
-    }
 
     @Override
     public int compareTo(Student s){

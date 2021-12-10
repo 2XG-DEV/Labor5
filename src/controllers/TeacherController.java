@@ -19,6 +19,11 @@ public class TeacherController {
         this.repo.create(t);
     }
 
+    /**
+     * Finds teacher object in the repository based on its id
+     * @param id id of teacher to be found
+     * @return teacher object with said id , null if not found
+     */
     public Teacher getTeacherById(int id){
         List<Teacher> all = repo.getAll();
         for(Teacher s : all){
@@ -29,6 +34,10 @@ public class TeacherController {
         return null;
     }
 
+    /**
+     * Finds all teachers in the repository
+     * @return list of all teachers
+     */
     public List<Teacher> getAllTeachers(){
         return repo.getAll();
     }
